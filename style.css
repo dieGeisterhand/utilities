@@ -1,0 +1,18 @@
+body {
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+img {
+  height: 50vh;
+  width: 25vw;
+  border-radius: 50%;
+}
+
+div {
+  object-fit: contain;
+}
