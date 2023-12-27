@@ -11,8 +11,8 @@ img {
   height: 50vh;
   width: 25vw;
   border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
 }
 
-div {
-  object-fit: contain;
-}
+
