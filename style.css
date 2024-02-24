@@ -1,18 +1,32 @@
+html, body {
+  height: 100%;
+  box-sizing: border-box;
+}
+
 body {
-  background: black;
   display: flex;
-  justify-content: center;
+  width: 100%;
   align-items: center;
-  height: 100vh;
-  margin: 0;
+  justify-content: center;
 }
 
-img {
-  height: 50vh;
-  width: 25vw;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: top;
+p, input, button {
+  font-family: monospace;
+  font-size: 28px;
+  margin: 25px auto;
+  padding: 10px;
 }
 
+.main-div {
+  width: 500px;
+  height: 380px;
+  text-align: center;
+  padding: 25px;
+  background-color: aquamarine;
+}
 
+#celsius {
+  color: gray;
+  border: 1px solid white;
+  padding: 20px;
+}
