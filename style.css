@@ -28,5 +28,6 @@ p, input, button {
 #celsius {
   color: gray;
   border: 1px solid white;
+  height: 75px;
   padding: 20px;
 }
