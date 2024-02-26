@@ -1,11 +1,12 @@
 const firstLine = document.getElementById("descLineOne");
 const secondLine = document.getElementById("descLineTwo");
+const fahrenheit = document.getElementById("fahrenheit");
 
 function descriptionTextF() {
     firstLine.innerText = "Enter F degrees below";
     secondLine.innerText = "and click 'Convert'";
     return;
-};
+}
 
 
 
@@ -44,3 +45,4 @@ function celsiusConversion() {
     }
 
 }
+*/

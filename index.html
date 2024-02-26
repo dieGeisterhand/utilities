@@ -10,13 +10,6 @@
   <body>
 
     <div  class="header-div">
-      <div  class="show-options"
-            id="option-display"
-            onclick="openMenu()">
-        <p  class="gt">
-         &gt;
-        </p>
-      </div>
       <a  href="https://www.jeyfrem.com/"
           target="_blank">
         <p  class="title-text">
@@ -28,6 +21,7 @@
       <ul>
         <li>
           <button class="option"
+                  id="fahrenheit"
                   onclick="descriptionTextF()">
             Fahrenheit <br> &gt; Celsius
           </button>
@@ -60,19 +54,21 @@
       <div  class="input-div">
         <p  class="description"
             id="descLineOne">
-            1
+            Select one of the available
         </p>
         <p  class="description"
             id="descLineTwo">
-            2
+            options above first.
             
         </p>
         
         <div class="input-button-div">
-          <input  type="text"
+          <input  type="number"
                   class="input-box"
                   id="input"
-                  maxlength="4"/>
+                  min="-999"
+                  max="999"
+                  required />
           <button class="convert" id="convert">
             Convert
           </button>
