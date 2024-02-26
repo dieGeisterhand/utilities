@@ -74,10 +74,6 @@ li {
   border-right: 4px solid white;
 }
 
-button:focus {
-  background-color: white;
-  color: black;
-}
 li:first-of-type {
   border-left: 8px solid white;
 }
