@@ -4,15 +4,6 @@ body {
   overflow: hidden;
 }
 
-a {
-  text-decoration: none;
-  margin: 0;
-}
-
-a:hover {
-  border-bottom: 3px solid white;
-}
-
 .title-div {
   display: flex;
   justify-content: center;
@@ -23,9 +14,10 @@ a:hover {
   text-align: center;
   font-size: 80px;
   padding: 30px;
-
   border: 8px solid white;
 }
+
+
 
 .utility-box{
   display: flex;
@@ -35,9 +27,32 @@ a:hover {
   background-color: aqua;
 }
 
+
+select {
+  font-family: monospace;
+  margin: 25px;
+  padding: 10px;
+  font-size: 25px;
+  height: 100px;
+}
+
+input[type=radio] {
+  accent-color: black;
+  outline: none;
+}
+
 .footer-div {
   display: flex;
   justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  margin: 0;
+}
+
+a:hover {
+  border-bottom: 3px solid white;
 }
 
 .footer-text {
