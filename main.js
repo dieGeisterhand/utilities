@@ -1,17 +1,10 @@
-function openMenu() {
-    const navBar = document.getElementById("nav-bar");
-    const currentWidth = navBar.clientWidth;
-    const currentHeight = navBar.clientHeight;
-
-    navBar.style.width = currentWidth + 100 + "px";
-    navBar.style.height = currentHeight + 100 + "px";
-}
 
 
 
 
 /* 
 REFERENCE
+
 
 
 const fahrenheitInput = document.getElementById("fahrenheit");
@@ -34,4 +27,3 @@ function celsiusConversion() {
     }
 
 }
-*/
