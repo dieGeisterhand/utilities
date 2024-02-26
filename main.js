@@ -1,3 +1,20 @@
+const firstLine = document.getElementById("descLineOne");
+const secondLine = document.getElementById("descLineTwo");
+
+function descriptionTextF() {
+    firstLine.innerText = "Enter F degrees below";
+    secondLine.innerText = "and click 'Convert'";
+    return;
+};
+
+
+
+// f to c formula is (°C) = (Temperature in degrees Fahrenheit (°F) - 32) * 5/9
+
+
+function cmConversionText() {}
+function mConversionText() {}
+function kconversionText() {}
 
 
 

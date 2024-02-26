@@ -27,7 +27,8 @@
     <div>
       <ul>
         <li>
-          <button class="option">
+          <button class="option"
+                  onclick="descriptionTextF()">
             Celsius to Fahrenheit
           </button>
         </li>
@@ -56,9 +57,16 @@
           </p>
       </div>
 
-      <div class="input-div">
-        <p class="description">Enter F degrees below</p>
-        <p class="description">and click 'Convert'</p>
+      <div  class="input-div">
+        <p  class="description"
+            id="descLineOne">
+            1
+        </p>
+        <p  class="description"
+            id="descLineTwo">
+            2
+            
+        </p>
         
         <div class="input-button-div">
           <input  type="text"
@@ -73,6 +81,8 @@
 
     </div>
 
-    <script src="main.js"></script>
+    <script src="main.js">
+      
+    </script>
   </body>
 </html>
