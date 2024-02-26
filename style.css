@@ -20,14 +20,26 @@ body {
 
 .nav-bar {
   position: fixed;
+  display: flex;
   height: 150px;
   width: 150px;
   margin: 10px;
   position: 0;
   border: 8px solid white;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 } 
 
 
+.nav-bar p {
+  font-size: 80px;
+}
+
+.nav-bar:hover {
+  transform: rotate(90deg);
+}
 
 .utility-box{
   display: flex;
