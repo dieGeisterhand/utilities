@@ -3,12 +3,16 @@ body {
   width: 100%; 
   margin: 0 auto;
   text-align: center;
-  background-color: blue;
+  background-color: rgb(0, 0, 0);
+  font-family: monospace;
+  color: white;
+
 }
 
-.title-div {
+.header-div {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  margin: 80px 0 50px 0;
 }
 
 .title-text {
@@ -16,69 +20,59 @@ body {
   text-align: center;
   font-size: 80px;
   padding: 30px;
+  margin: 0;
   border: 8px solid white;
 }
 
-.nav-bar {
+
+.option-display {
   display: flex;
   height: 150px;
   width: 300px;
   font-size: 80px;
-  margin: 80px;
   position: 0;
   border: 8px solid white;
   color: white;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  background-color: black;
 } 
 
 .gt {
   transform: rotate(90deg);
 }
 
-.nav-bar:hover {
+.option-display:hover {
   background-color: white;
   color: black;
 }
 
-.menu-options {
-  position: fixed;
+ul {
   display: flex;
-  height: 150px;
-  width: 150px;
-  font-size: 80px;
-  margin: 250px 10px 10px 10px;
-  position: 0;
-  border-bottom: 8px solid white;
-  color: white;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  background-color: black;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
 }
+
+li {
+  border-bottom: 8px solid white;
+}
+
+
 
 .utility-box{
   display: flex;
   margin: 50px auto;
   justify-content: center;
-  width: 1100px;
-  height: 798px;
+  width: 100%;
+  height: 800px;
   background-color: aqua;
 }
 
 
 
-
-input[type=radio] {
-  accent-color: rgb(136, 136, 136);
-  -ms-transform: scale(1.5); /* IE 9 */
-  -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
-  transform: scale(1.5);
-  margin: 25px;
-
-}
 
 .footer-div {
   display: flex;
