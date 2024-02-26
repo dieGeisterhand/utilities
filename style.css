@@ -36,9 +36,17 @@ select {
   height: 100px;
 }
 
+.radio-div {
+  display: flex;
+  flex-direction: column;
+}
 input[type=radio] {
-  accent-color: black;
-  outline: none;
+  accent-color: rgb(136, 136, 136);
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+  transform: scale(1.5);
+  margin: 25px;
+
 }
 
 .footer-div {
