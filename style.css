@@ -28,6 +28,15 @@ body {
   color: black;
 }
 
+a {
+  text-decoration: none;
+  margin: 0;
+}
+
+a:hover {
+  background-color: white;
+  color: black;
+}
 
 .show-options {
   display: flex;
@@ -73,7 +82,7 @@ li:last-of-type {
   border-right: 8px solid white;
 }
 
-.option {
+.option, .convert {
   font-family: monospace;
   font-size: 40px;
   border: none;
@@ -87,31 +96,57 @@ li:last-of-type {
   color: black;
 }
 
-
-
 .utility-box{
   display: flex;
+  flex-direction: column;
   margin: 50px auto;
-  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 800px;
-  background-color: aqua;
 }
 
-
-
-
-.footer-div {
+.output-div {
   display: flex;
+  height: 300px;
+  width: 300px;
+  background-color: black;
   justify-content: center;
+  align-items: center;
+  margin: 50px;
+  border: 4px solid white;
 }
 
-a {
-  text-decoration: none;
+.output {
+  font-size: 40px;
+}
+
+.description {
   margin: 0;
 }
+.description:last-of-type {
+  margin: 0 0 50px 0;
+}
 
-a:hover {
-  background-color: white;
-  color: black;l
+.input-div, .input-box {
+  font-family: monospace;
+  font-size: 40px;
+}
+
+.input-button-div {
+  display: flex;
+  width: 300px;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+.input-box {
+  margin: 0;
+  height: 100px;
+  width: 100px;
+  border: none;
+}
+
+.convert {
+  border: 4px solid white;
+  width: 200px;
 }

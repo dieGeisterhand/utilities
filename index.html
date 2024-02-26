@@ -9,16 +9,17 @@
   </head>
   <body>
 
-    <div class="header-div">
-      <div class="show-options"
-      id="option-display"
-      onclick="openMenu()">
-        <p class="gt">
+    <div  class="header-div">
+      <div  class="show-options"
+            id="option-display"
+            onclick="openMenu()">
+        <p  class="gt">
          &gt;
-      </p>
-    </div>
-      <a href="https://www.jeyfrem.com/" target="_blank">
-        <p class="title-text">
+        </p>
+      </div>
+      <a  href="https://www.jeyfrem.com/"
+          target="_blank">
+        <p  class="title-text">
           J's utility kit
         </p>
       </a>
@@ -48,6 +49,28 @@
       </ul>
     </div>
     <div class="utility-box">
+      <div  class="output-div">
+          <p  class="output"
+              id="output">
+            <!-- space for output -->
+          </p>
+      </div>
+
+      <div class="input-div">
+        <p class="description">Enter F degrees below</p>
+        <p class="description">and click 'Convert'</p>
+        
+        <div class="input-button-div">
+          <input  type="text"
+                  class="input-box"
+                  id="input"
+                  maxlength="4"/>
+          <button class="convert" id="convert">
+            Convert
+          </button>
+        </div>  
+      </div>
+
     </div>
 
     <script src="main.js"></script>
