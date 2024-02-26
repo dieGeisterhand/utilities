@@ -22,6 +22,7 @@ body {
 .utility-box{
   display: flex;
   margin: 50px auto;
+  justify-content: center;
   width: 798px;
   height: 798px;
   background-color: aqua;
@@ -29,6 +30,7 @@ body {
 
 
 select {
+  text-align: center;
   font-family: monospace;
   margin: 25px;
   padding: 10px;
@@ -39,7 +41,9 @@ select {
 .radio-div {
   display: flex;
   flex-direction: column;
+  display: none;
 }
+
 input[type=radio] {
   accent-color: rgb(136, 136, 136);
   -ms-transform: scale(1.5); /* IE 9 */
