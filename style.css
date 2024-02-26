@@ -1,0 +1,47 @@
+body {
+  background-color: black;
+  font-family: monospace;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  margin: 0;
+}
+
+a:hover {
+  border-bottom: 3px solid white;
+}
+
+.title-div {
+  display: flex;
+  justify-content: center;
+}
+
+.title-text {
+  color: white;
+  text-align: center;
+  font-size: 80px;
+  padding: 30px;
+
+  border: 8px solid white;
+}
+
+.utility-box{
+  display: flex;
+  margin: 50px auto;
+  width: 798px;
+  height: 798px;
+  background-color: aqua;
+}
+
+.footer-div {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-text {
+  color: white;
+  font-size: 25px;
+  margin: 0;
+}
