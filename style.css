@@ -89,11 +89,13 @@ li:last-of-type {
   background-color: black;
   color: white;
   padding: 0;
+  cursor: pointer;
 }
 
 .option {
   padding: 0 35px;
 }
+
 .option:hover {
   background-color: white;
   color: black;
