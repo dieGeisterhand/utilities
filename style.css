@@ -91,6 +91,9 @@ li:last-of-type {
   padding: 0;
 }
 
+.option {
+  padding: 0 35px;
+}
 .option:hover {
   background-color: white;
   color: black;
