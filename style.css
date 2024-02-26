@@ -24,10 +24,14 @@ body {
   border: 8px solid white;
 }
 
+.title-text:hover {
+  color: black;
+}
+
 
 .show-options {
   display: flex;
-  height: 150px;
+  height: 155px;
   width: 300px;
   font-size: 80px;
   position: 0;
@@ -108,11 +112,6 @@ a {
 }
 
 a:hover {
-  border-bottom: 3px solid white;
-}
-
-.footer-text {
-  color: white;
-  font-size: 25px;
-  margin: 0;
+  background-color: white;
+  color: black;l
 }
