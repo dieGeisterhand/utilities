@@ -25,7 +25,7 @@ body {
 }
 
 
-.option-display {
+.show-options {
   display: flex;
   height: 150px;
   width: 300px;
@@ -42,7 +42,7 @@ body {
   transform: rotate(90deg);
 }
 
-.option-display:hover {
+.show-options:hover {
   background-color: white;
   color: black;
 }
@@ -57,7 +57,6 @@ ul {
 }
 
 li {
-  padding: 10px;
   border-left: 4px solid white;
   border-right: 4px solid white;
 }
@@ -70,6 +69,19 @@ li:last-of-type {
   border-right: 8px solid white;
 }
 
+.option {
+  font-family: monospace;
+  font-size: 40px;
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 0;
+}
+
+.option:hover {
+  background-color: white;
+  color: black;
+}
 
 
 
