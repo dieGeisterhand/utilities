@@ -24,7 +24,7 @@ function fahrenheitConversionText() {
     if (convert) {
         convert.removeEventListener("click", cmToInch);
         convert.removeEventListener("click", metersToFeet);
-        convert.removeEventListener("click", kilometersToMiles);
+        convert.removeEventListener("click", milesToKilometers);
         convert.removeAttribute("onclick");
     }
     convert.setAttribute("onclick", "fToC()");
@@ -53,7 +53,7 @@ function cmConversionText() {
     if (convert) {
         convert.removeEventListener("click", fToC);
         convert.removeEventListener("click", metersToFeet);
-        convert.removeEventListener("click", kilometersToMiles);
+        convert.removeEventListener("click", milesToKilometers);
         convert.removeAttribute("onclick");
     }
     convert.setAttribute("onclick", "cmToInch()");
@@ -82,7 +82,7 @@ function meterConversionText() {
     if (convert) {
         convert.removeEventListener("click", fToC);
         convert.removeEventListener("click", cmToInch);
-        convert.removeEventListener("click", kilometersToMiles);
+        convert.removeEventListener("click", milesToKilometers);
         convert.removeAttribute("onclick");
     }
     convert.setAttribute("onclick", "metersToFeet()");
@@ -105,7 +105,7 @@ function metersToFeet() {
 }
 
 // kilometer to mile conversion functions
-function kilometerConversionText() {
+function mileConversionText() {
     firstLine.innerText = "Enter kilometers to convert below (number)";
     secondLine.innerText = "and click 'Convert'";
     if (convert) {
@@ -114,20 +114,20 @@ function kilometerConversionText() {
         convert.removeEventListener("click", metersToFeet);
         convert.removeAttribute("onclick");
     }
-    convert.setAttribute("onclick", "kilometersToMiles()");
-    convert.addEventListener("click", kilometersToMiles);
+    convert.setAttribute("onclick", "milesToKilometers()");
+    convert.addEventListener("click", milesToKilometers);
     return;
 }
 
-function kilometersToMiles() {
+function milesToKilometers() {
     const inputValue = inputElement.value;
     const checkNumber = parseFloat(inputValue);
     if (isNaN(checkNumber)) {
         firstLine.innerText = `Please enter a valid number`;
         output.innerText = `x`;
     } else {
-        kilometerConversionText();
-        const miles = (inputValue * 0.621371).toFixed(2);
+        mileConversionText();
+        const miles = (inputValue * 1.6).toFixed(2);
         output.innerText = miles;
         return;
     }
