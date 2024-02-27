@@ -128,6 +128,7 @@ function kilometersToMiles() {
     } else {
         kilometerConversionText();
         const miles = (inputValue * 0.621371).toFixed(2);
+        output.innerText = miles;
         return;
     }
 }
