@@ -70,34 +70,51 @@ function cmToInch() {
     }
 }
 
+// meter to foot conversion functions
+function meterConversionText() {
+    firstLine.innerText = "Enter meters to convert below (number)";
+    secondLine.innerText = "and click 'Convert'";
+    if (convert) {
+        convert.removeAttribute("onclick");
+    }
+    convert.setAttribute("onclick", "metersToFeet()");
+    convert.addEventListener("click", metersToFeet);
+}
 
-function meterConversionText() {}
-function kilometerconversionText() {}
-
-
-/* 
-REFERENCE
-
-
-
-const fahrenheitInput = document.getElementById("fahrenheit");
-const celsius = document.getElementById("celsius");
-// f to c formula is (°C) = (Temperature in degrees Fahrenheit (°F) - 32) * 5/9
-
-function celsiusConversion() {
-    const fahrenheit = parseFloat(fahrenheitInput.value);
-    
-    if (fahrenheit === ``) {
-        celsius.innerText = `Please enter a number.`;
-        return;
-    } else if (!isNaN(fahrenheit)) {
-        const celsiusCalc = ((fahrenheit - 32) * (5/9)).toFixed(1);
-        celsius.innerText = `${celsiusCalc} C`;
-        return;
+function metersToFeet() {
+    const inputValue = inputElement.value;
+    const checkNumber = parseFloat(inputValue);
+    if (isNaN(checkNumber)) {
+        firstLine.innerText = `Please enter a valid number`;
+        output.innerText = `x`;
     } else {
-        celsius.innerText = `Please enter a number.`;
+        meterConversionText();
+        const feet = (inputValue * 3.28).toFixed(2);
+        output.innerText = feet;
         return;
     }
-
 }
-*/
+
+// kilometer to mile conversion functions
+function kilometerConversionText() {
+    firstLine.innerText = "Enter kilometers to convert below (number)";
+    secondLine.innerText = "and click 'Convert'";
+    if (convert) {
+        convert.removeAttribute("onclick");
+    }
+    convert.setAttribute("onclick", "kilometersToMiles()");
+    convert.addEventListener("click", kilometersToMiles);
+}
+
+function kilometersToMiles() {
+    const inputValue = inputElement.value;
+    const checkNumber = parseFloat(inputValue);
+    if (isNaN(checkNumber)) {
+        firstLine.innerText = `Please enter a valid number`;
+        output.innerText = `x`;
+    } else {
+        kilometerConversionText();
+        const miles = (inputValue * 0.621371).toFixed(2);
+        return;
+    }
+}
