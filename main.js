@@ -22,6 +22,9 @@ function fahrenheitConversionText() {
     firstLine.innerText = "Enter F degrees below (number)";
     secondLine.innerText = "and click 'Convert'";
     if (convert) {
+        convert.removeEventListener("click", cmToInch);
+        convert.removeEventListener("click", metersToFeet);
+        convert.removeEventListener("click", kilometersToMiles);
         convert.removeAttribute("onclick");
     }
     convert.setAttribute("onclick", "fToC()");
@@ -48,6 +51,9 @@ function cmConversionText() {
     firstLine.innerText = "Enter CMs to convert below (number)";
     secondLine.innerText = "and click 'Convert'";
     if (convert) {
+        convert.removeEventListener("click", fToC);
+        convert.removeEventListener("click", metersToFeet);
+        convert.removeEventListener("click", kilometersToMiles);
         convert.removeAttribute("onclick");
     }
     convert.setAttribute("onclick", "cmToInch()");
@@ -74,6 +80,9 @@ function meterConversionText() {
     firstLine.innerText = "Enter meters to convert below (number)";
     secondLine.innerText = "and click 'Convert'";
     if (convert) {
+        convert.removeEventListener("click", fToC);
+        convert.removeEventListener("click", cmToInch);
+        convert.removeEventListener("click", kilometersToMiles);
         convert.removeAttribute("onclick");
     }
     convert.setAttribute("onclick", "metersToFeet()");
@@ -100,6 +109,9 @@ function kilometerConversionText() {
     firstLine.innerText = "Enter kilometers to convert below (number)";
     secondLine.innerText = "and click 'Convert'";
     if (convert) {
+        convert.removeEventListener("click", fToC);
+        convert.removeEventListener("click", cmToInch);
+        convert.removeEventListener("click", metersToFeet);
         convert.removeAttribute("onclick");
     }
     convert.setAttribute("onclick", "kilometersToMiles()");
