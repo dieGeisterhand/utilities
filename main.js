@@ -18,7 +18,9 @@ function highlight(element) {
   currentlyHighlighted = element;
 }
 
-function descriptionTextF() {
+
+// F to C conversion functions
+function fahrenheitConversionText() {
     firstLine.innerText = "Enter F degrees below (number)";
     secondLine.innerText = "and click 'Convert'";
     if (convert) {
@@ -31,24 +33,46 @@ function descriptionTextF() {
 
 function fToC() {
     const inputValue = inputElement.value;
-    checkNumber = parseFloat(inputValue);
+    const checkNumber = parseFloat(inputValue);
     if (isNaN(checkNumber)) {
         firstLine.innerText = `Please enter a valid number`;
         output.innerText = `x`;
     } else {
-        descriptionTextF();
+        fahrenheitConversionText();
         const celsius = ((inputValue - 32) * (5 / 9)).toFixed(1);
         output.innerText = celsius;
         return;
     }
 }
   
+// CM to Inch conversion functions
+function cmConversionText() {
+    firstLine.innerText = "Enter CMs to convert below (number)";
+    secondLine.innerText = "and click 'Convert'";
+    if (convert) {
+        convert.removeAttribute("onclick");
+    }
+    convert.setAttribute("onclick", "cmToInch()");
+    convert.addEventListener("click", cmToInch);
+}
 
-// f to c formula is (°C) = (Temperature in degrees Fahrenheit (°F) - 32) * 5/9
+function cmToInch() {
+    const inputValue = inputElement.value;
+    const checkNumber = parseFloat(inputValue);
+    if (isNaN(checkNumber)) {
+        firstLine.innerText = `Please enter a valid number`;
+        output.innerText = `x`;
+    } else {
+        cmConversionText();
+        const inches = (inputValue * 0.3937).toFixed(2);
+        output.innerText = inches;
+        return;
+    }
+}
 
-function iConversionText() {}
-function mConversionText() {}
-function kconversionText() {}
+
+function meterConversionText() {}
+function kilometerconversionText() {}
 
 
 /* 
