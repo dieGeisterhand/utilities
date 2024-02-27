@@ -6,7 +6,6 @@ const convert = document.getElementById("convert");
 const output = document.getElementById("output");
 const inputElement = document.getElementById("input");
 
-
 // adds the highlighted class to the clicked menu element
 let currentlyHighlighted = null;
 
@@ -17,7 +16,6 @@ function highlight(element) {
   element.classList.add('highlighted');
   currentlyHighlighted = element;
 }
-
 
 // F to C conversion functions
 function fahrenheitConversionText() {
