@@ -52,6 +52,7 @@ function cmConversionText() {
     }
     convert.setAttribute("onclick", "cmToInch()");
     convert.addEventListener("click", cmToInch);
+    return;
 }
 
 function cmToInch() {
@@ -77,6 +78,7 @@ function meterConversionText() {
     }
     convert.setAttribute("onclick", "metersToFeet()");
     convert.addEventListener("click", metersToFeet);
+    return;
 }
 
 function metersToFeet() {
@@ -102,6 +104,7 @@ function kilometerConversionText() {
     }
     convert.setAttribute("onclick", "kilometersToMiles()");
     convert.addEventListener("click", kilometersToMiles);
+    return;
 }
 
 function kilometersToMiles() {
