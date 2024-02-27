@@ -38,6 +38,12 @@ a:hover {
   color: black;
 }
 
+
+.highlighted {
+  background-color: white;
+  color: black;
+}
+
 .show-options {
   display: flex;
   height: 155px;
@@ -86,14 +92,14 @@ li:last-of-type {
   font-family: monospace;
   font-size: 40px;
   border: none;
-  background-color: black;
-  color: white;
   padding: 0;
   cursor: pointer;
 }
 
 .option {
   padding: 0 35px;
+  display: flex;
+  flex-direction: column;
 }
 
 .utility-box{
