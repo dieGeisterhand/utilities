@@ -6,22 +6,21 @@ const fahrenheit = document.getElementById("fahrenheit");
 let currentlyHighlighted = null;
 
 function highlight(element) {
-  // Remove highlight from the currently highlighted item
+
   if (currentlyHighlighted) {
     currentlyHighlighted.classList.remove('highlighted');
   }
 
-  // Add highlight to the clicked item
+
   element.classList.add('highlighted');
 
-  // Update the currently highlighted reference
   currentlyHighlighted = element;
 }
 
 
 
 function descriptionTextF() {
-    firstLine.innerText = "Enter F degrees below";
+    firstLine.innerText = "Enter F degrees below (number)";
     secondLine.innerText = "and click 'Convert'";
     return;
 }
