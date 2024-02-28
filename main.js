@@ -19,7 +19,6 @@ function highlight(element) {
   output.innerText = '';
 }
 
-
 // F to C conversion functions
 function fahrenheitConversionText() {
     firstLine.innerText = "Enter F degrees below";
@@ -33,7 +32,6 @@ function fahrenheitConversionText() {
 }
 
 function fToC() {
-    const inputValue = inputElement.value;
     if (isNaN(inputValue) || inputValue === ``) {
         inputNotValid();
     } else {
@@ -43,7 +41,7 @@ function fToC() {
         return;
     }
 }
-  
+
 // CM to Inch conversion functions
 function cmConversionText() {
     firstLine.innerText = "Enter CMs to convert below";
