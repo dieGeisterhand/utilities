@@ -137,10 +137,13 @@ a:hover {
   vertical-align: middle;
 }
 
+.sign {
+  margin: 0 10px 0 0;
+}
 .input-box {
   margin: 0;
-  height: 100px;
-  width: 100px;
+  height: 125px;
+  width: 120px;
   border: none;
 }
 

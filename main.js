@@ -12,20 +12,20 @@ let currentlyHighlighted = null;
 function highlight(element) {
   if (currentlyHighlighted) {
     currentlyHighlighted.classList.remove('highlighted');
+    rmValues(); // clear up input/output values upon changing active option
   }
   element.classList.add('highlighted');
   currentlyHighlighted = element;
+  output.innerText = '';
 }
+
 
 // F to C conversion functions
 function fahrenheitConversionText() {
-    firstLine.innerText = "Enter F degrees below (number)";
+    firstLine.innerText = "Enter F degrees below";
     secondLine.innerText = "and click 'Convert'";
     if (convert) {
-        convert.removeEventListener("click", cmToInch);
-        convert.removeEventListener("click", metersToFeet);
-        convert.removeEventListener("click", milesToKilometers);
-        convert.removeAttribute("onclick");
+        rmEvents();
     }
     convert.setAttribute("onclick", "fToC()");
     convert.addEventListener("click", fToC);
@@ -34,10 +34,8 @@ function fahrenheitConversionText() {
 
 function fToC() {
     const inputValue = inputElement.value;
-    const checkNumber = parseFloat(inputValue);
-    if (isNaN(checkNumber)) {
-        firstLine.innerText = `Please enter a valid number`;
-        output.innerText = `x`;
+    if (isNaN(inputValue) || inputValue === ``) {
+        inputNotValid();
     } else {
         fahrenheitConversionText();
         const celsius = ((inputValue - 32) * (5 / 9)).toFixed(1);
@@ -48,13 +46,10 @@ function fToC() {
   
 // CM to Inch conversion functions
 function cmConversionText() {
-    firstLine.innerText = "Enter CMs to convert below (number)";
+    firstLine.innerText = "Enter CMs to convert below";
     secondLine.innerText = "and click 'Convert'";
     if (convert) {
-        convert.removeEventListener("click", fToC);
-        convert.removeEventListener("click", metersToFeet);
-        convert.removeEventListener("click", milesToKilometers);
-        convert.removeAttribute("onclick");
+        rmEvents();
     }
     convert.setAttribute("onclick", "cmToInch()");
     convert.addEventListener("click", cmToInch);
@@ -63,10 +58,8 @@ function cmConversionText() {
 
 function cmToInch() {
     const inputValue = inputElement.value;
-    const checkNumber = parseFloat(inputValue);
-    if (isNaN(checkNumber)) {
-        firstLine.innerText = `Please enter a valid number`;
-        output.innerText = `x`;
+    if (isNaN(inputValue) || inputValue === ``) {
+        inputNotValid();
     } else {
         cmConversionText();
         const inches = (inputValue * 0.3937).toFixed(2);
@@ -77,13 +70,10 @@ function cmToInch() {
 
 // meter to foot conversion functions
 function meterConversionText() {
-    firstLine.innerText = "Enter meters to convert below (number)";
+    firstLine.innerText = "Enter meters to convert below";
     secondLine.innerText = "and click 'Convert'";
     if (convert) {
-        convert.removeEventListener("click", fToC);
-        convert.removeEventListener("click", cmToInch);
-        convert.removeEventListener("click", milesToKilometers);
-        convert.removeAttribute("onclick");
+        rmEvents();
     }
     convert.setAttribute("onclick", "metersToFeet()");
     convert.addEventListener("click", metersToFeet);
@@ -92,10 +82,8 @@ function meterConversionText() {
 
 function metersToFeet() {
     const inputValue = inputElement.value;
-    const checkNumber = parseFloat(inputValue);
-    if (isNaN(checkNumber)) {
-        firstLine.innerText = `Please enter a valid number`;
-        output.innerText = `x`;
+    if (isNaN(inputValue) || inputValue === ``) {
+        inputNotValid();
     } else {
         meterConversionText();
         const feet = (inputValue * 3.28).toFixed(2);
@@ -106,13 +94,10 @@ function metersToFeet() {
 
 // kilometer to mile conversion functions
 function mileConversionText() {
-    firstLine.innerText = "Enter kilometers to convert below (number)";
+    firstLine.innerText = "Enter kilometers to convert below";
     secondLine.innerText = "and click 'Convert'";
     if (convert) {
-        convert.removeEventListener("click", fToC);
-        convert.removeEventListener("click", cmToInch);
-        convert.removeEventListener("click", metersToFeet);
-        convert.removeAttribute("onclick");
+        rmEvents();
     }
     convert.setAttribute("onclick", "milesToKilometers()");
     convert.addEventListener("click", milesToKilometers);
@@ -121,14 +106,34 @@ function mileConversionText() {
 
 function milesToKilometers() {
     const inputValue = inputElement.value;
-    const checkNumber = parseFloat(inputValue);
-    if (isNaN(checkNumber)) {
-        firstLine.innerText = `Please enter a valid number`;
-        output.innerText = `x`;
+    if (isNaN(inputValue) || inputValue === ``) {
+        inputNotValid();
     } else {
         mileConversionText();
         const miles = (inputValue * 1.6).toFixed(2);
         output.innerText = miles;
         return;
     }
+}
+
+// I clear up event listeners and attributes
+function rmEvents() {
+    convert.removeEventListener("click", fToC);
+    convert.removeEventListener("click", cmToInch);
+    convert.removeEventListener("click", metersToFeet);
+    convert.removeEventListener("click", milesToKilometers);
+    convert.removeAttribute("onclick");
+    return; 
+}
+
+// I display error message if input is not valid
+function inputNotValid() {
+    firstLine.innerText = `Please enter a valid number`;
+    output.innerText = `X`;
+}
+
+// I clear up output and input values
+function rmValues() {
+    output.innerText = '';
+    inputElement.value = '';
 }
