@@ -148,6 +148,7 @@ a:hover {
 }
 .input-box {
   margin: 0;
+  padding: 0 10px 0 10px;
   height: 125px;
   width: 120px;
   border: none;
