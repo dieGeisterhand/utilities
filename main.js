@@ -32,6 +32,7 @@ function fahrenheitConversionText() {
 }
 
 function fToC() {
+    const inputValue = inputElement.value;
     if (isNaN(inputValue) || inputValue === ``) {
         inputNotValid();
     } else {
