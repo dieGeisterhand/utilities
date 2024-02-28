@@ -21,7 +21,7 @@ function highlight(element) {
 
 // F to C conversion functions
 function fahrenheitConversionText() {
-    firstLine.innerText = "Enter F degrees below";
+    firstLine.innerText = "Enter fahrenheit degrees below";
     secondLine.innerText = "and click 'Convert'";
     if (convert) {
         rmEvents();
@@ -44,7 +44,7 @@ function fToC() {
 
 // CM to Inch conversion functions
 function cmConversionText() {
-    firstLine.innerText = "Enter CMs to convert below";
+    firstLine.innerText = "Enter centimeters below";
     secondLine.innerText = "and click 'Convert'";
     if (convert) {
         rmEvents();
@@ -68,7 +68,7 @@ function cmToInch() {
 
 // meter to foot conversion functions
 function meterConversionText() {
-    firstLine.innerText = "Enter meters to convert below";
+    firstLine.innerText = "Enter meters below";
     secondLine.innerText = "and click 'Convert'";
     if (convert) {
         rmEvents();
@@ -92,7 +92,7 @@ function metersToFeet() {
 
 // kilometer to mile conversion functions
 function mileConversionText() {
-    firstLine.innerText = "Enter kilometers to convert below";
+    firstLine.innerText = "Enter kilometers below";
     secondLine.innerText = "and click 'Convert'";
     if (convert) {
         rmEvents();
